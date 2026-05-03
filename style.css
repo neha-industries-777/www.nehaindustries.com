@@ -1,0 +1,317 @@
+:root {
+    --green: #28a745;
+    --blue: #0b2c4d;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* TOPBAR */
+.topbar {
+    background: var(--blue);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    font-size: 14px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+}
+
+.navbar nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.quote-btn {
+    background: var(--green);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quote-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+.hero {
+    background: url('images/plant.jpeg') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    color: black;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+/* BUTTONS */
+.green {
+    background: var(--green);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.blue {
+    background: var(--blue);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: var(--blue);
+    color: white;
+    padding: 40px;
+}
+
+.stats h2 {
+    color: var(--green);
+}
+
+/* PLANTS */
+.plants {
+    padding: 80px 60px;
+    background: #f5f7fa;
+}
+
+.plants-container {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+
+.plants-left h2 {
+    font-size: 42px;
+    color: var(--blue);
+    margin: 15px 0;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.plants-right {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* IMAGE HOVER ZOOM */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+.card-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: white;
+    color: var(--green);
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    background: #f0f0f0;
+}
+
+.booking form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: auto;
+}
+
+.booking input,
+.booking select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.neha {
+    color: var(--green);
+}
+
+.industries {
+    color: var(--blue);
+}
+
+.tagline {
+    font-size: 12px;
+    margin-top: 2px;
+    color: gray;
+}
+.green-text {
+    color: var(--green);
+}
+
+.blue-text {
+    color: var(--blue);
+}
+.small-title {
+    color: var(--green);
+    font-weight: bold;
+}
+.nav-link {
+    color: black;
+}
+
+.nav-link.active {
+    color: var(--green);
+    border-bottom: 2px solid var(--green);
+}
+html {
+    scroll-behavior: smooth;
+}
+/* ABOUT SECTION */
+.about {
+    padding: 80px 60px;
+    background: white;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* IMAGE */
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* CONTENT */
+.about-content {
+    width: 50%;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.about-content span {
+    color: var(--green);
+}
+
+.about-desc {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* POINTS */
+.about-points p {
+    margin: 8px 0;
+}
+
+/* BUTTON spacing */
+.about-content .green {
+    margin-top: 20px;
+}
+.about-image img {
+    transition: 0.4s;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+/* TESTIMONIALS */
+.testimonials {
+    width: 100%;
+    clear: both;
+}
+.testimonials {
+    padding: 80px 60px;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin: 10px 0 40px;
+}
+
+/* CONTAINER */
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* CARD */
+.testimonial-card {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* HOVER */
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+/* TEXT */
+.testimonial-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.testimonial-card h4 {
+    margin-top: 15px;
+    color: var(--green);
+}
