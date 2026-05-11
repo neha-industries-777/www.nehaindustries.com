@@ -6,3 +6,9 @@ links.forEach(link => {
         this.classList.add("active");
     });
 });
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("nav");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+});
