@@ -315,45 +315,87 @@ html {
     margin-top: 15px;
     color: var(--green);
 }
-/* =========================
-   MOBILE RESPONSIVE DESIGN
-========================= */
+/* ===================================
+   PREMIUM MOBILE RESPONSIVE DESIGN
+=================================== */
 
 @media (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     /* TOP BAR */
+
     .top-bar {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 12px;
+        font-size: 11px;
         text-align: center;
-        gap: 8px;
-        padding: 10px;
-        font-size: 12px;
     }
 
     /* NAVBAR */
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
-    }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+    .navbar {
+        padding: 15px;
+        position: relative;
     }
 
     .logo h1 {
         font-size: 28px;
     }
 
+    .logo p {
+        font-size: 10px;
+    }
+
+    /* HAMBURGER BUTTON */
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        color: var(--blue);
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        background: white;
+        width: 100%;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+        text-align: center;
+    }
+
     /* HERO SECTION */
+
     .hero {
         flex-direction: column;
-        height: auto;
+        justify-content: center;
+        align-items: center;
         padding: 40px 20px;
         text-align: center;
+        min-height: auto;
         background-position: center;
+        background-size: cover;
     }
 
     .hero-left {
@@ -366,51 +408,81 @@ html {
     }
 
     .hero-left p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 20px 0;
     }
 
-    /* HERO BUTTONS */
     .hero-buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
     }
 
     .hero-buttons a {
         width: 100%;
-        text-align: center;
     }
 
-    /* STATS BAR */
+    /* STATS */
+
     .stats {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
         gap: 25px;
-        text-align: center;
         padding: 30px 20px;
+        text-align: center;
     }
 
     /* ABOUT SECTION */
+
     .about-container {
+        display: flex;
         flex-direction: column;
         gap: 30px;
-    }
-
-    .about-left,
-    .about-right {
-        width: 100%;
+        padding: 0 20px;
     }
 
     .about-left img {
         width: 100%;
-        height: auto;
+        border-radius: 20px;
+        transition: 0.4s;
+    }
+
+    .about-left img:hover {
+        transform: scale(1.04);
+    }
+
+    .about-right {
+        width: 100%;
     }
 
     .about-right h2 {
         font-size: 38px;
+        line-height: 1.1;
     }
 
-    /* PLANT SECTION */
+    .about-right p {
+        font-size: 15px;
+        line-height: 1.8;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .about-features {
+        margin-top: 20px;
+    }
+
+    .about-features li {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    /* PLANTS SECTION */
+
     .plants-container {
+        display: flex;
         flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
     }
 
     .plants-left {
@@ -420,37 +492,65 @@ html {
 
     .plants-left h2 {
         font-size: 42px;
+        line-height: 1.1;
     }
 
     .plant-cards {
-        width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
+        width: 100%;
     }
 
     .plant-card {
         width: 100%;
+        border-radius: 18px;
+        overflow: hidden;
     }
 
     .plant-card img {
         width: 100%;
         height: auto;
+        transition: 0.4s;
+    }
+
+    .plant-card:hover img {
+        transform: scale(1.05);
     }
 
     /* TESTIMONIALS */
+
     .testimonial-container {
+        display: flex;
         flex-direction: column;
         gap: 20px;
+        padding: 0 20px;
     }
 
     .testimonial-card {
         width: 100%;
+        padding: 20px;
+        border-radius: 18px;
+        box-sizing: border-box;
+        animation: fadeUp 0.8s ease;
+    }
+
+    .testimonial-card p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .testimonial-card h4 {
+        font-size: 15px;
+        margin-top: 15px;
     }
 
     /* BOOKING FORM */
+
     .booking-form {
         width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
     .booking-form form {
@@ -463,12 +563,23 @@ html {
     .booking-form select,
     .booking-form button {
         width: 100%;
+        box-sizing: border-box;
     }
 
-    /* WHATSAPP BUTTON */
-    .whatsapp-btn {
-        bottom: 15px;
-        right: 15px;
+    /* ANIMATION */
+
+    @keyframes fadeUp {
+
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
     }
 
         }
