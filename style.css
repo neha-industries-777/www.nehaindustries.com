@@ -315,3 +315,160 @@ html {
     margin-top: 15px;
     color: var(--green);
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    /* TOP BAR */
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+        background-position: center;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
+    .hero-left p {
+        font-size: 16px;
+    }
+
+    /* HERO BUTTONS */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* STATS BAR */
+    .stats {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    /* ABOUT SECTION */
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    .about-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-right h2 {
+        font-size: 38px;
+    }
+
+    /* PLANT SECTION */
+    .plants-container {
+        flex-direction: column;
+    }
+
+    .plants-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .plants-left h2 {
+        font-size: 42px;
+    }
+
+    .plant-cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .plant-card {
+        width: 100%;
+    }
+
+    .plant-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+    }
+
+    /* BOOKING FORM */
+    .booking-form {
+        width: 100%;
+    }
+
+    .booking-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form button {
+        width: 100%;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+
+        }
