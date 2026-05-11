@@ -28,7 +28,9 @@
     <span class="neha">Neha</span> <span class="industries">Industries</span>
     <p class="tagline">Biodiesel Plant Manufacturers</p>
 </h2>
-
+<div class="menu-toggle">
+☰
+</div>
     <nav>
     <a href="#home" class="nav-link active">Home</a>
     <a href="#about" class="nav-link">About</a>
@@ -247,6 +249,15 @@
 </form>
 
 </section>
+<script>
 
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+</script>
 </body>
 </html>x
